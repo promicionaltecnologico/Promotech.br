@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achadinhos Tech - Acessórios para Celular</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:#fff;
+}
+
+/* MENU */
+header{
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:15px 20px;
+    box-shadow:0 0 10px rgba(255,255,255,.1);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#FFD700;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu-btn{
+    font-size:30px;
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+    flex-direction:column;
+    background:#1a1a1a;
+    padding:15px;
+    margin-top:10px;
+    border-radius:10px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    padding:10px 0;
+    border-bottom:1px solid #333;
+}
+
+.menu a:hover{
+    color:#FFD700;
+}
+
+/* BANNER */
+.banner{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.banner img{
+    width:250px;
+    max-width:100%;
+    border-radius:50%;
+}
+
+.banner h1{
+    color:#FFD700;
+    margin-top:20px;
+    font-size:40px;
+}
+
+.banner p{
+    color:#ccc;
+    margin-top:10px;
+}
+
+/* PRODUTOS */
+.produtos{
+    padding:40px 20px;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:30px;
+    color:#FFD700;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#161616;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.preco-antigo{
+    text-decoration:line-through;
+    color:#999;
+}
+
+.preco-novo{
+    color:#00ff88;
+    font-size:24px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:#FFD700;
+    color:#000;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#ffea4d;
+}
+
+/* BENEFÍCIOS */
+.beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.beneficio{
+    background:#161616;
+    padding:20px;
+    border-radius:15px;
+}
+
+.beneficio h3{
+    color:#FFD700;
+}
+
+/* INSTAGRAM */
+.instagram{
+    background:#111;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.instagram h2{
+    margin-bottom:15px;
+}
+
+.instagram a{
+    background:#E1306C;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    display:inline-block;
+    margin-top:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#777;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">ACHADINHOS TECH</div>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+    </div>
+
+    <div class="menu" id="menu">
+        <a href="#">📱 Capinhas</a>
+        <a href="#">🔋 Carregadores</a>
+        <a href="#">🔌 Cabos USB</a>
+        <a href="#">📍 Suportes</a>
+        <a href="#">🎧 Fones</a>
+        <a href="#">⌚ Smartwatch</a>
+        <a href="#">📦 Outros Acessórios</a>
+    </div>
+</header>
+
+<section class="banner">
+    <!-- Troque pelo caminho da sua logo -->
+    <img src="logo-achadinhos-tech.png" alt="Achadinhos Tech">
+
+    <h1>Achadinhos Tech</h1>
+    <p>Os melhores acessórios para seu celular com ofertas imperdíveis.</p>
+</section>
+
+<section class="produtos">
+
+    <h2 class="titulo">🔥 Ofertas em Destaque</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x400" alt="">
+            <h3>Capinha Anti Impacto</h3>
+            <p class="preco-antigo">R$29,89</p>
+            <p class="preco-novo">R$9,50</p>
+            <a href="#" class="btn">Ver Oferta</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x400" alt="">
+            <h3>Carregador Turbo 20W</h3>
+            <p class="preco-antigo">R$59,90</p>
+            <p class="preco-novo">R$24,90</p>
+            <a href="#" class="btn">Ver Oferta</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x400" alt="">
+            <h3>Cabo USB-C Reforçado</h3>
+            <p class="preco-antigo">R$24,99</p>
+            <p class="preco-novo">R$8,99</p>
+            <a href="#" class="btn">Ver Oferta</a>
+        </div>
+
+        <div class="card">
+            <img src="https://photos.app.goo.gl/PUWC6epEYP2E4rhz6/400x400" alt="">
+            <h3>Suporte para Carro</h3>
+            <p class="preco-antigo">R$39,90</p>
+            <p class="preco-novo">R$14,90</p>
+            <a href="#" class="btn">Ver Oferta</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="beneficios">
+
+    <div class="beneficio">
+        <h3>✅ Qualidade</h3>
+        <p>Produtos selecionados.</p>
+    </div>
+
+    <div class="beneficio">
+        <h3>💰 Economia</h3>
+        <p>Ofertas atualizadas diariamente.</p>
+    </div>
+
+    <div class="beneficio">
+        <h3>🔒 Segurança</h3>
+        <p>Compra segura através dos parceiros.</p>
+    </div>
+
+</section>
+
+<section class="instagram">
+
+    <h2>📸 Siga nossa loja no Instagram</h2>
+
+    <p>Acompanhe promoções e novidades todos os dias.</p>
+
+    <!-- Troque pelo seu Instagram -->
+    <a href="https://instagram.com/SEUINSTAGRAM" target="_blank">
+        Acessar Instagram
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Achadinhos Tech - Todos os direitos reservados.
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+
+    if(menu.style.display === "flex"){
+        menu.style.display = "none";
+    }else{
+        menu.style.display = "flex";
+    }
+}
+</script>
+
+</body>
+</html>
